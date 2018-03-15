@@ -19,7 +19,7 @@ width = 4096
 
 for i in range(5):
 	ix = random.randint(0,samples.shape[0]-width-1)
-	print ix,samples[ix:ix+width]
+	print( ix,samples[ix:ix+width])
 	img = gen_rgb(samples[ix:ix+width])
 	cv2.imshow('Sample',img)
 	cv2.imwrite('Sample_%d.png'%ix,img)

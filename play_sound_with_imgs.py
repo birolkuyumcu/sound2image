@@ -27,7 +27,7 @@ samples,sample_rate = librosa.load(filename)
 
 duration = samples.shape[0] / sample_rate
 fps = 25
-width = samples.shape[0] / (fps*duration)
+width = int(samples.shape[0] / (fps*duration))
 
 for ix,i in enumerate(range(0,samples.shape[0],width)):
 	img = gen_rgb(samples[i:i+width])
